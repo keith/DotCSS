@@ -10,7 +10,34 @@
 		C2D73AC01F415510005D47A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D73ABF1F415510005D47A3 /* AppDelegate.swift */; };
 		C2D73AC41F415510005D47A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D73AC31F415510005D47A3 /* Assets.xcassets */; };
 		C2D73AC71F415510005D47A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D73AC51F415510005D47A3 /* Main.storyboard */; };
+		C2D73ADA1F41568C005D47A3 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D73AD91F41568C005D47A3 /* SafariExtensionHandler.swift */; };
+		C2D73AE71F41568C005D47A3 /* DotCSSExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C2D73AD21F41568C005D47A3 /* DotCSSExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C2D73AEE1F41578E005D47A3 /* DotCSS.js in Resources */ = {isa = PBXBuildFile; fileRef = C2D73AEC1F41577D005D47A3 /* DotCSS.js */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2D73AE51F41568C005D47A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D73AB41F415510005D47A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2D73AD11F41568C005D47A3;
+			remoteInfo = DotCSSExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2D73AEB1F41568C005D47A3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C2D73AE71F41568C005D47A3 /* DotCSSExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C2D73ABC1F415510005D47A3 /* DotCSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotCSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,23 +45,21 @@
 		C2D73AC31F415510005D47A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2D73AC61F415510005D47A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2D73AC81F415510005D47A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D73AD21F41568C005D47A3 /* DotCSSExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DotCSSExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D73AD41F41568C005D47A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C2D73AD81F41568C005D47A3 /* DotCSSExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DotCSSExtension.entitlements; sourceTree = "<group>"; };
+		C2D73AD91F41568C005D47A3 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		C2D73AE01F41568C005D47A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D73AEC1F41577D005D47A3 /* DotCSS.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = DotCSS.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C2D73AB91F415510005D47A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C2D73AB31F415510005D47A3 = {
 			isa = PBXGroup;
 			children = (
 				C2D73ABE1F415510005D47A3 /* DotCSS */,
+				C2D73AD61F41568C005D47A3 /* DotCSSExtension */,
+				C2D73AD31F41568C005D47A3 /* Frameworks */,
 				C2D73ABD1F415510005D47A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				C2D73ABC1F415510005D47A3 /* DotCSS.app */,
+				C2D73AD21F41568C005D47A3 /* DotCSSExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +84,33 @@
 			path = DotCSS;
 			sourceTree = "<group>";
 		};
+		C2D73AD31F41568C005D47A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2D73AD41F41568C005D47A3 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2D73AD61F41568C005D47A3 /* DotCSSExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C2D73AD91F41568C005D47A3 /* SafariExtensionHandler.swift */,
+				C2D73AEC1F41577D005D47A3 /* DotCSS.js */,
+				C2D73AE01F41568C005D47A3 /* Info.plist */,
+				C2D73AD71F41568C005D47A3 /* Supporting Files */,
+			);
+			path = DotCSSExtension;
+			sourceTree = "<group>";
+		};
+		C2D73AD71F41568C005D47A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2D73AD81F41568C005D47A3 /* DotCSSExtension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -66,17 +119,34 @@
 			buildConfigurationList = C2D73ACB1F415510005D47A3 /* Build configuration list for PBXNativeTarget "DotCSS" */;
 			buildPhases = (
 				C2D73AB81F415510005D47A3 /* Sources */,
-				C2D73AB91F415510005D47A3 /* Frameworks */,
 				C2D73ABA1F415510005D47A3 /* Resources */,
+				C2D73AEB1F41568C005D47A3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C2D73AE61F41568C005D47A3 /* PBXTargetDependency */,
 			);
 			name = DotCSS;
 			productName = DotCSS;
 			productReference = C2D73ABC1F415510005D47A3 /* DotCSS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C2D73AD11F41568C005D47A3 /* DotCSSExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2D73AEA1F41568C005D47A3 /* Build configuration list for PBXNativeTarget "DotCSSExtension" */;
+			buildPhases = (
+				C2D73ACE1F41568C005D47A3 /* Sources */,
+				C2D73AD01F41568C005D47A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DotCSSExtension;
+			productName = DotCSSExtension;
+			productReference = C2D73AD21F41568C005D47A3 /* DotCSSExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -90,6 +160,12 @@
 				TargetAttributes = {
 					C2D73ABB1F415510005D47A3 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = MY3W53WSD2;
+						ProvisioningStyle = Automatic;
+					};
+					C2D73AD11F41568C005D47A3 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = MY3W53WSD2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -108,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				C2D73ABB1F415510005D47A3 /* DotCSS */,
+				C2D73AD11F41568C005D47A3 /* DotCSSExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -122,6 +199,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2D73AD01F41568C005D47A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D73AEE1F41578E005D47A3 /* DotCSS.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -133,7 +218,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2D73ACE1F41568C005D47A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D73ADA1F41568C005D47A3 /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2D73AE61F41568C005D47A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2D73AD11F41568C005D47A3 /* DotCSSExtension */;
+			targetProxy = C2D73AE51F41568C005D47A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C2D73AC51F415510005D47A3 /* Main.storyboard */ = {
@@ -242,12 +343,16 @@
 		C2D73ACC1F415510005D47A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MY3W53WSD2;
 				INFOPLIST_FILE = DotCSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.DotCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -255,12 +360,48 @@
 		C2D73ACD1F415510005D47A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MY3W53WSD2;
 				INFOPLIST_FILE = DotCSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.DotCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C2D73AE81F41568C005D47A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DotCSSExtension/DotCSSExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = MY3W53WSD2;
+				INFOPLIST_FILE = DotCSSExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.DotCSS.DotCSSExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C2D73AE91F41568C005D47A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DotCSSExtension/DotCSSExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = MY3W53WSD2;
+				INFOPLIST_FILE = DotCSSExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.DotCSS.DotCSSExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -284,6 +425,16 @@
 				C2D73ACD1F415510005D47A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2D73AEA1F41568C005D47A3 /* Build configuration list for PBXNativeTarget "DotCSSExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2D73AE81F41568C005D47A3 /* Debug */,
+				C2D73AE91F41568C005D47A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
